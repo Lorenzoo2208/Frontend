@@ -16,13 +16,128 @@
         // let stringa = "testo";
         // let boolean = true //false;
 
-        let testo = "ciao";
-        console.log(testo);
+        // let testo = "ciao";
+        // console.log(testo);
 
-        testo = 2;
-        console.log(testo);
+        // testo = 2;
+        // console.log(testo);
 
-        const costante = "questo è un testo";
+        // const costante = "questo è un testo";
+
+        // ARRAY IN JAVASCRIPT
+
+        // let arr = []; //ricorda di mettere le parentesi quadre
+        let giocatori = ["messi", "ronaldo", "neymar"];
+        console.log(giocatori[1]); // messi, gli array sono 0 based index(primo elemento è 0)
+        //lunghezza di un array
+        console.log(giocatori.length); // 3
+        //modificare un elemento
+        giocatori[2] = "Batistuta";
+        console.log(giocatori); // Batistuta
+
+        //Aggiungere e Rimuovere un elemento in una array
+        //push, pop, unshift, shift
+        //push e unshift aggiungono (push in fondo, unshift in cima)
+        //pop e shift rimuovono (pop in fondo, shift in cima)
+        giocatori.push("Maradona"); 
+        giocatori.unshift("In cima");
+
+        giocatore.pop(); // rimuove l'ultimo elemento
+        giocatori.shift(); // rimuove il primo elemento
+
+        giocatori.splice(1,1); // rimuove l'elemento in posizione 1 (ronaldo)
+
+        let mesi = ["Gennaio", "Marzo", "Aprile", "Giugno"];
+        let mesiCorretti = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio"];
+
+        mesi.splice(1,0,"Febbraio"); //parti dall'elemento dell'indice 1 e rimuovi 0 elementi, aggiungi "Febbraio"
+        mesi.splice(mesi.length -1, 1, "Maggio", "Giugno", "Luglio"); 
+
+        console.log(mesi);
+        console.log(giocatori); // ["messi", "ronaldo", "neymar", "Maradona"]
+
+        //concatenazione di 2 array
+        let mesi2 = mesi.concat(mesiCorretti); //aggiunge mesiCorretti a mesi
+        //Splice "Avanzato
+        mesi.splice(mesi.length -1,1, ...mesiCorretti);
+
+        // CONDIZIONI
+
+        let eta = prompt("Inserisci la tua età", "18");
+        let nome = prompt("Inserisi il tuo nome");
+
+        if(eta > 18) {
+           alert("Sei maggiorenne");
+           if(nome.lenght >6){
+            alert("E hai pure un nome lungo?");
+           }
+        }
+        else if (eta ==18){
+            alert("Complimenti sei diventato maggiorenne")
+        }
+        else {
+            alert("Sei minorenne")
+
+        }
+
+        //utilizzare gli switch per condizione specifiche
+        switch(nome[0].toLowerCase()){
+            case "a":
+                alert("Il tuo nome inizia con la A");
+                break;
+            case "b":
+                alert(" il tuo nome inizia con la B");
+                break;
+            default:
+                alert("il tuo nome non i zia ne con a ne con b");
+                break;
+
+        // && (and). || (or). ! (not)
+
+        if(eta > 18 && eta == 20) {
+            //emtra qui se entrambe sono vere
+            console.log("Ha 20 anni");
+        }
+        else if (eta < 19 || eta == 30){
+            //entra qui se almeno una delle due condizioni è vera
+        }
+
+        //Per JavaScript sono "false": false ,0, null, undefined, [], "".
+        //questi valori in una condizione equivale a scrivere if(false)
+
+        //CICLI
+
+        let mesiCorretti = ["Maggio", "Giugno", "Luglio", "Agosto", "Settembre"];
+
+        //for(da dove parto, fin dove arrivo, di quanto aumento l'indice di ogni interazione)
+        for(let i = 0; i < mesiCorretti.lenght -1; i++) {
+            console.log(mesiCorretti[i]);
+        }
+        for(let mese of mesiCorretti){
+            // console.log(mese);
+        }
+
+        let index = 1;//indice del ciclo while
+        //controllo prima di eseguire le operazioni
+        //che l'indice sia minore della lunghezza dell' array (che è 1)
+        while (index < mesiCorretti.lenght) {
+            console.log(mesiCorretti[index]);
+            index++;
+        }//non entra nel while
+
+        let indexDo = 0;// indice del ciclo doWhile
+        //eseguo le istruzioni del blocco
+        do{
+            console.log(arrayWhile[indexDo]);
+            indexDo++;
+        } while(indexDo < arrayWhile.length);// controllo se posso ripetere un altra volta
+        
+        }
+
+
+        
+        
+
         
     </script>
 </body>
