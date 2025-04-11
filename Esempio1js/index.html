@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+// // let x;
+// // var a;
+// let aggiornarepagina;
+// let numero = 1.545;
+// let stringa = "testo";
+// let boolean = true //false
+// let testo = "ciao";
+// console.log(testo)
+// testo = 2;
+// console.log(testo)
+// const costante = "questo è un testo"
+
+    /* APPROFONDIMENTO: NUMERO */
+//number= intero, float, doubl, binary, octal, ecc...
+
+
+// let numero = 1.251859465246765;
+// //.toFixed(numeroDiDecimali) resistuisce una stringa con un il numero di decimali richiesto
+// console.log(numero.toFixed(2));
+// //Output: 1.25
+
+
+// let num = 25;
+// console.log(1 + num.toString)
+// //Output: 125
+
+
+// let numeroStringa = "125"
+// numeroNumero = Number(numeroStringa);
+// console.log(1 + numeroNumero);
+// //Ouput: 126
+
+
+// /* OPERATORI */
+// console.log(2**3); //Potenza ( 2^(3) = 8 )
+// console.log(6%2); // Restituisce il resto (in questo caso 0)
+
+
+// /* OPERATORI CON ASSEGNAZIONE (+=, -=, *=, /=) */
+// let numero = 10;
+// numero *= 2; //al posto di scrivere 'numero = numero *2;'
+// console.log(numero);
+
+
+// /* OPERATORI DI INCREMENTO E DECREMENTO */
+// let numDaIncrementare = 9;2**3
+// console.log(numDaIncrementare++); //Output: 9 (ma valore di numDaIncrementare è 10)
+
+
+// /* OPERATORI */
+// console.log(2**3); //Potenza ( 2^(3) = 8 )
+// console.log(6%2); // Restituisce il resto (in questo caso 0)
+
+
+// /* OPERATORI CON ASSEGNAZIONE (+=, -=, *=, /=) */
+// let numero = 10;
+// numero *= 2; //al posto di scrivere 'numero = numero *2;'
+// console.log(numero);
+
+
+// /* OPERATORI DI INCREMENTO E DECREMENTO */
+// let numDaIncrementare = 9;2**3
+// console.log(numDaIncrementare++); //Output: 9 (ma valore di numDaIncrementare è 10)
+
+
+// /* OPERATORI DI COMPARAZIONE ( ==, !=, ===, !==, <, >, <=, >=) */
+// let numeroStringa = "25";
+// let numero = 25;
+
+
+// console.log( numeroStringa == numero ); // Ouput: TRUE in quanto va a vedere "graficamente"
+// console.log( numeroStringa === numero ); // Ouput: FALSE in quanto va a vedere il contenuto
+
+
+// /* APPROFONDIMENTO STRINGHE */
+
+
+// let testo = "Mimmo";
+// let testo1 = ' class="" ';
+// let corso = "JavaScript";
+
+
+// let elmentoHTML = "<p class = \"\"></p>"; // il "\" è chiamato escape ed è sconsigliato da usare
+// console.log("ciao, " + testo);
+// //E' più veloce usare i backtick (alt gr + ')
+// console.log(`ciao, ${testo}. Questo è un corso ${corso}`);
+
+
+// /* METODI STRING */
+// console.log(`La stringa 'corso' è lunga ${corso.lenght} caratteri.`);// Restituisce il numero di caratteri
+// console.log(corso[0]) // Recupera la prima lettera della stringa
+// console.log(corso[(--corso.length)]) // Recupera l'ultima lettera della stringa
+
+
+// let stringaComplessa = "Ciao, piacere, sono Emanuele";
+// let indexPiacere = stringaComplessa.indexOf("piacere");// .indexOf("piacere") ricerca in quale posizione della stringa inizia la parola "piacere", tenendo in considerazione anche gli spazi
+// console.log(indexPiacere); //Output: 6 (dalla sesta posizione inizia la parola completa "piacere")
+
+
+// //Visualizza la slice di indexPiacere
+// console.log(stringaComplessa.slice(indexPiacere, 13));
+
+
+// //Maiuscolo o minuscolo
+// console.log(stringaComplessa.toUpperCase());
+// console.log(stringaComplessa.toLowerCase());
+
+
+// //Replace (senza modificare la variabile, come tutti gli altri metodi)
+// let presenta = "Ciao";
+// console.log(presenta.replace("p", "o"));
+
+
+
+
+// //Esercizio
+// let text = "Ciao sono Emanuele";
+// let indexEmanuele = text.indexOf("Emanuele");
+// console.log(text);
+// let text1 = (text.replace(text.slice(indexEmanuele, 20), "Valentino"));
+// console.log(text1.toUpperCase());
+
+
+        // ARRAY IN JAVASCRIPT
+
+        // let arr = []; //ricorda di mettere le parentesi quadre
+        let giocatori = ["messi", "ronaldo", "neymar"];
+        console.log(giocatori[1]); // messi, gli array sono 0 based index(primo elemento è 0)
+        //lunghezza di un array
+        console.log(giocatori.length); // 3
+        //modificare un elemento
+        giocatori[2] = "Batistuta";
+        console.log(giocatori); // Batistuta
+
+        //Aggiungere e Rimuovere un elemento in una array
+        //push, pop, unshift, shift
+        //push e unshift aggiungono (push in fondo, unshift in cima)
+        //pop e shift rimuovono (pop in fondo, shift in cima)
+        giocatori.push("Maradona"); 
+        giocatori.unshift("In cima");
+
+        giocatore.pop(); // rimuove l'ultimo elemento
+        giocatori.shift(); // rimuove il primo elemento
+
+        giocatori.splice(1,1); // rimuove l'elemento in posizione 1 (ronaldo)
+
+        let mesi = ["Gennaio", "Marzo", "Aprile", "Giugno"];
+        let mesiCorretti = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio"];
+
+        mesi.splice(1,0,"Febbraio"); //parti dall'elemento dell'indice 1 e rimuovi 0 elementi, aggiungi "Febbraio"
+        mesi.splice(mesi.length -1, 1, "Maggio", "Giugno", "Luglio"); 
+
+        console.log(mesi);
+        console.log(giocatori); // ["messi", "ronaldo", "neymar", "Maradona"]
+
+        //concatenazione di 2 array
+        let mesi2 = mesi.concat(mesiCorretti); //aggiunge mesiCorretti a mesi
+        //Splice "Avanzato
+        mesi.splice(mesi.length -1,1, ...mesiCorretti);
+
+        // CONDIZIONI
+
+        let eta = prompt("Inserisci la tua età", "18");
+        let nome = prompt("Inserisi il tuo nome");
+
+        if(eta > 18) {
+           alert("Sei maggiorenne");
+           if(nome.lenght >6){
+            alert("E hai pure un nome lungo?");
+           }
+        }
+        else if (eta ==18){
+            alert("Complimenti sei diventato maggiorenne")
+        }
+        else {
+            alert("Sei minorenne")
+
+        }
+
+        //utilizzare gli switch per condizione specifiche
+        switch(nome[0].toLowerCase()){
+            case "a":
+                alert("Il tuo nome inizia con la A");
+                break;
+            case "b":
+                alert(" il tuo nome inizia con la B");
+                break;
+            default:
+                alert("il tuo nome non i zia ne con a ne con b");
+                break;
+
+        // && (and). || (or). ! (not)
+
+        if(eta > 18 && eta == 20) {
+            //emtra qui se entrambe sono vere
+            console.log("Ha 20 anni");
+        }
+        else if (eta < 19 || eta == 30){
+            //entra qui se almeno una delle due condizioni è vera
+        }
+
+        //Per JavaScript sono "false": false ,0, null, undefined, [], "".
+        //questi valori in una condizione equivale a scrivere if(false)
+
+        //CICLI
+
+        let mesiCorretti = ["Maggio", "Giugno", "Luglio", "Agosto", "Settembre"];
+
+        //for(da dove parto, fin dove arrivo, di quanto aumento l'indice di ogni interazione)
+        for(let i = 0; i < mesiCorretti.lenght -1; i++) {
+            console.log(mesiCorretti[i]);
+        }
+        for(let mese of mesiCorretti){
+            // console.log(mese);
+        }
+
+        let index = 1;//indice del ciclo while
+        //controllo prima di eseguire le operazioni
+        //che l'indice sia minore della lunghezza dell' array (che è 1)
+        while (index < mesiCorretti.lenght) {
+            console.log(mesiCorretti[index]);
+            index++;
+        }//non entra nel while
+
+        let indexDo = 0;// indice del ciclo doWhile
+        //eseguo le istruzioni del blocco
+        do{
+            console.log(arrayWhile[indexDo]);
+            indexDo++;
+        } while(indexDo < arrayWhile.length);// controllo se posso ripetere un altra volta
+        
+        }
+
+            // /* FUNZIONI */
+        
+        
+        // //Funzione dichiarativa
+        // function saluta(nome){
+        //     return "Ciao " + nome;
+        // }
+        
+        
+        // //Funzione espressiva o variabile
+        // let salutaVar = function(nome){
+        //     return `Ciao, ${nome}!`;
+        // }
+        
+        
+        // //Arrow function
+        // let salutaArrow = (nome) => `Ciao, ${nome}!`;
+        // let salutaArrowGraffe = (nome) => { return `Ciao, ${nome}!`};
+        
+        
+        // console.log(saluta("Emanuele"));
+        // console.log(salutaVar("Emanuele"));
+        // console.log(salutaArrow("Emanuele"));
+        
+        
+        // //Find
+        // let arrayToFind = ["Thomas", "Leonardo", "Andrea"];
+        // arrayToFind.find(function(value, index){ return value == "Leonardo"});
+        // let leonardo = arrayToFind.find((value, index) => value == "Leonardo");
+        
+        
+        // console.log(leonardo);arrayToFind.filter((valore) => valore == "Leonardo")
+        
+        
+        // let numbers = [1, 2, 3, 4, 5];
+        // console.log(numbers.find((value) => {
+        //     let valsomma = value +2;
+        //     return valsomma/2 == 3;
+        // }));
+        
+        
+        // //map
+        // let mapNome = (persona) => persona.nome;
+        // let arrayToMap = [{nome: "Emanuele", cognome: "Martinelli"}, {nome: "Thomas", cognome: "Masera"}];
+        // let nomi = arrayToMap.map((value) => mapNome(value));
+        // console.log(nomi);
+        
+        
+        let arrayToFind = ["Thomas", "Leonardo", "Andrea"];
+        //foreach
+        arrayToFind.forEach((valoreIterato) => {
+           console.log(valoreIterato);
+        });
+        
+        
+        //filter
+        console.log(arrayToFind.filter((valore) => valore == "Leonardo"));
+        
+        
+        
+        
+        
+        
+        //reduce
+        let numbers = [1, 2, 3, 4, 5];
+        let somma = numbers.reduce((accumulatore, numero) => accumulatore + numero, 0);
+        console.log(somma);
+        
+        
+        
+                
+                
+        
+                
+    </script>
+</body>
+</html>
