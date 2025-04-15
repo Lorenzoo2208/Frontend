@@ -1,0 +1,40 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+#board {
+    /* Dimensioni */
+    height: 540px;
+    width: 630px;
+    padding: 10px;
+
+    /* Colori */
+    background-color:rgb(91,91,240);
+    border: 8px solid rgb(20,20,114);
+    border-radius: 50px;
+
+    /* Layout e posizione */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* margin: 0 auto; */
+}
+.tile{
+    /* DIMENSIONI */
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+ 
+ 
+    /* COLORE */
+    background-color: transparent;
+    border-radius: 50%; /*Rende rotondo un elemento*/
+    border: 5px solid navy;
+ 
+ 
+    /* Altri attributi */
+    cursor:pointer;
+ }
+ 

@@ -1,0 +1,100 @@
+body /*Selettore*/ {
+    /* Regole di stile */
+    background-color: #8a7351;
+    color: #ffffff;
+    /* Per cambiare il colore del testo */
+    /* color: rgba(255Rosso, 255Verde, 255Blu, 0Opacità) */
+ }
+ 
+ 
+ p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-family permette di dare dinamicità nella scelta del font del testo del sito: se il primo font non è disponibile passa al secondo e così via */
+ }
+ 
+ 
+ html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+ 
+ /* # = id, . = class */
+ #paragrafo, .bold{
+    font-size: 36px;
+    color: blue;
+ }/* è come se dicesse: "all'elemento con id = 'paragrafo' e class = 'bold' passagli un font-size pari a 36 pixel e il colore blu*/
+ 
+ 
+ p{
+    font-size: 25px;
+    color: red;
+ } /* ATTENZIONE: i selettori per id e class sono 'dominanti' rispetto a i semplici selettori, in questo caso "#paragrafo, .bold" ha precedenza rispetto a "p"*/
+ 
+ 
+ div.potenze p sup:not(.no-yellow){
+    color: yellow;
+ }/* gli elementi con la classe "potenze" contenuti p e contenuti in sup avranno il colore giallo*/
+ 
+ 
+ /*
+    <div class="pippo"></div>
+    <p class="lillo"></div>
+ 
+ 
+    .pippo + .lillo {...}
+ 
+ 
+    <div class="pippo">
+        <div class="franco"></div>
+        <p class="lillo"></div>
+    </div>
+ */
+ 
+ 
+ h1, h2, h3, h4, h5, h6{
+    margin: 20px;
+    padding: 20px;
+ }
+ 
+ 
+ /*
+ margin: 20px applica il margin a tutti i lati
+ margin: 20px 10px applica il margine di 20px in alto e basso e 10 px a destra e sinistra
+ 
+ 
+ margin: 20px 10px 15px 30px; top - right - bottom - left
+ 
+ 
+ padding: 20px applica il padding a tutti i lati
+ padding: 20px 10px applica il padding di 20px in alto e basso e 10 px a destra e sinistra
+ */
+ 
+ 
+ /* scrivendo "nome_selettore:" andiamo a integrare gli 'eventi' */
+ h1:hover{
+    cursor: pointer;
+    color: var(--colore-primario); /* richiama la variabile dichiarata nel ":root"*/
+    text-decoration: underline;
+ }
+ 
+ 
+ /* con ":root" andiamo a dichiarare variabili */
+ :root{
+    --colore-primario: #5050e8;
+ }
+ 
+ 
+ /* FLEXBOX è una libreria che permette di organizzare bene e velocemente la pagina che stiamo creando */
+ .flex-container{
+    display:flex; /*"tipo" di ordine*/
+    flex-direction: column; /* come ordinarlo */
+ }
+ 
+ 
+ .potenze{
+    display: flex;
+    justify-content: space-between;
+ } /* prende l'intera larghezza della pagina e distribuisce su una stessa linea in modo equivalente lo spazio tra gli elementi contenuti nella classe "potenze" */
+ 
+ 
+ 
